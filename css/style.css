@@ -45,6 +45,7 @@ body {
   font-weight: 500;
   line-height: 1.2;
   letter-spacing: 0.02em;
+  border: 1px solid #ECECEC
 }
 
 .nav {
@@ -54,7 +55,7 @@ body {
   align-items: center;
 }
 
-.web {
+.web-head {
   font-family: "Raleway", sans-serif;
   font-style: normal;
   font-weight: bold;
@@ -216,6 +217,9 @@ body {
 
 }
 
+.persons{
+  background: #F5F4FA;
+}
 
 .team-person {
   font-weight: 500;
@@ -229,7 +233,16 @@ body {
   text-align: center;
 }
 
-  
+.filter-list{
+  display:flex;
+  justify-content:center;
+
+}
+
+.filter-item{
+  margin: 0 8px;
+  padding: 94px 0 50px;
+}
 
 
 /* PORTFOLIO */
@@ -247,6 +260,19 @@ body {
   border: none;
 }
 
+.projects{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-bottom: 64px;
+
+}
+
+.project-item{
+  border: 1px solid #EEEEEE;
+  margin: 0 0 30px;
+}
+
 
 .project-name {
   font-weight: bold;
@@ -254,11 +280,15 @@ body {
   line-height: 2;
   letter-spacing: 0.06em;
   color: var(--black);
+  margin: 20px 0 4px;
+  padding-left: 24px;
 }
 
 .project-type {
   font-size: 16px;
   line-height: 1.9;
+  padding-left: 24px;
+  margin: 0 0 20px;
 }
 
 /* .filter-button:hover {
@@ -275,7 +305,14 @@ body {
   background-color: var(--footer);
 }
 
-.web {
+.web-foot {
+  font-family: "Raleway", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 1.2;
+  color: var(--blue);
+  text-decoration: none;
   display: block;
   margin-bottom: 20px;
 }
