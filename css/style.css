@@ -15,6 +15,8 @@
   --color-button: #f5f4fa;
   --color-bgd: #e5e5e5;
   --white-rgba:rgba(255, 255, 255, 0.6);
+  --color-border:#EEEEEE;
+  --color-border-header:#ECECEC;
 }
 
 h1,
@@ -62,7 +64,7 @@ body {
   font-weight: 500;
   line-height: 1.2;
   letter-spacing: 0.02em;
-  border: 1px solid #ECECEC;
+  border: 1px solid  var(--color-border-header);
   padding: 24px 0 25px;
 }
 
@@ -112,19 +114,18 @@ body {
   margin-left: auto;
 }
 
-.nav-email{
+.contacts-item:not(:last-child){
   margin-right: 50px;
 }
 
-.nav-link:hover,
-.nav-email:hover,
-.nav-phone:hover {
+.contacts-item:hover {
   color: var(--blue);
 }
 
 .order {
   background-color: var(--footer);
-  padding:200px 0;
+  padding-top:200px;
+  padding-bottom:200px;
 }
 
 .order-title {
@@ -146,7 +147,7 @@ body {
   font-weight: bold;
   font-size: 16px;
   line-height: 1.9;
-  display: flex;
+  display: block;
   align-items: center;
   text-align: center;
   letter-spacing: 0.06em;
@@ -154,21 +155,25 @@ body {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   color: var(--white);
-  margin: auto;
+  margin: 0 auto;
+  padding: 10px 32px;
+  border:none;
 }
 
-.skills-list {
+.card-set{
   display: flex;
   flex-wrap: wrap;
   margin-left: -30px;
   margin-top: -30px;
 }
 
-.skill-item {
-  /* box-sizing: border-box; */
-  flex-basis: calc((100% - 120px)/4);
+.card-item{
   margin-left: 30px;
   margin-top: 30px;
+}
+
+.skill-item{
+  flex-basis: calc(100%/4 - 30px);
 }
 
 
@@ -181,7 +186,6 @@ body {
   color: var(--black);
   height:16px;
   margin-bottom: 10px;
-  
 }
 
 .skill-descr {
@@ -197,7 +201,8 @@ body {
 }
 
 .section {
-  padding: 94px 0;
+  padding-top:94px;
+  padding-bottom:94px;
 }
 
 .about.section {
@@ -208,36 +213,30 @@ body {
   margin-bottom: 50px;
 }
 
-.doing-list {
+/* .doing-list {
   display: flex;
   flex-wrap: wrap;
   margin-top: -30px;
   margin-left: -30px;
-}
-.doing-list >li {
-  flex-wrap: wrap;
-  margin-top: 30px;
-  margin-left: 30px;
-  flex-basis: calc((100% - 90px)/3);
+} */
+
+.doing-item{
+  flex-basis: calc(100%/3 - 30px);
 }
 
 .doing-photo{
   display: block;
 }
 
-.team-list {
+/* .team-list {
   display: flex;
-  padding-left: 0;
   flex-wrap: wrap;
   margin-top: -30px;
   margin-left: -30px;
-}
+} */
 
 .team-item {
-  flex-wrap: wrap;
-  margin-top: 30px;
-  margin-left: 30px;
-  flex-basis: calc((100% - 120px)/4);
+  flex-basis: calc(100%/4 - 30px);
 }
 
 .persons{
@@ -245,7 +244,11 @@ body {
 }
 
 .team-desc {
-  padding: 30px 0;
+  padding-top:30px;
+  padding-bottom:30px;
+  background: var(--white);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
 }
 
 .team-person {
@@ -267,24 +270,22 @@ body {
 }
 
 
-/* .filter-item:hover {
+.filter-button:hover {
   background: var(--blue);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
   color: var(--white);
-} */
+}
 
 .filter-item{
-  padding:6px 22px;
-  background: #F5F4FA;
+  background: var(--color-button);
   border-radius: 4px;
 }
 
 .filter-item:not(:last-child) {
   margin-right: 8px;
 }
-
 
 /* PORTFOLIO */
 .filter-button {
@@ -298,25 +299,21 @@ body {
   color: var(--black);
   background: var(--color-button);
   border-radius: 4px;
-  border: none;
+  padding:6px 22px;
+  border:none;
 }
 
 .projects{
-  display: flex;
-  flex-wrap: wrap;
-  margin-top:-30px;
-  margin-left: -30px;
 }
 
 .project-item{
-  border: 1px solid #EEEEEE;
-  flex-basis: calc((100% - 90px)/3);
-  margin-top: 30px;
-  margin-left: 30px;
+  flex-basis: calc(100%/3 - 30px);
 }
 
 .project-desc{
-  padding: 20px 0 20px 24px;
+  padding: 20px 24px;
+  border: 1px solid var(--color-border);
+  
 }
 
 .project-name {
@@ -335,7 +332,7 @@ body {
 
 .foot {
   padding-top: 60px;
-  padding-bottom: 51px;
+  padding-bottom: 60px;
   background-color: var(--footer);
 }
 
